@@ -1,0 +1,9 @@
+urls:
+  base_url: http://localhost:8080
+credentials:
+  valid_credentials:
+    username: tomsmith
+    password: SuperSecretPassword!
+  invalid_credentials:
+    username: invalidUsername
+    password: invalidPassword
