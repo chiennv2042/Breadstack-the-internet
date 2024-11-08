@@ -1,6 +1,9 @@
 package pageobjects;
 
+import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,7 +21,6 @@ public class WebAbstractPage {
     protected WebElement element;
     protected By by;
 
-    long shortTimeout = 5;
     long longTimeout = 30;
 
     public WebAbstractPage(WebDriver driver) {
@@ -76,10 +78,6 @@ public class WebAbstractPage {
     }
     public List<WebElement> getListElements(String locator) {
         return driver.findElements(By.xpath(locator));
-    }
-    public boolean isElementEnabled(String locator) {
-        element = driver.findElement(By.xpath(locator));
-        return element.isEnabled();
     }
 
 }
